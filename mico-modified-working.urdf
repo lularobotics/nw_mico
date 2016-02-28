@@ -104,10 +104,18 @@
       effort="18"
       velocity="0.94" />
       -->
-    <!-- These limits are [-pi/2 - 2pi/3, -pi/2 + 2pi/3] since center is -pi/2 (neg y-axis) -->
+    <!-- These limits are [-pi/2 - 2pi/3, -pi/2 + 2pi/3] since center is -pi/2 (neg y-axis)
+         These are backward from NW's setup
     <limit
       lower="-3.6652"
       upper="0.52360"
+      effort="18"
+      velocity="0.94" />
+    -->
+    <!-- These limits are [pi/2 - 2pi/3, pi/2 + 2pi/3] where the center is pi/2 (y-axis) -->
+    <limit
+      lower="-0.52360"
+      upper="3.6652"
       effort="18"
       velocity="0.94" />
   </joint>
@@ -185,9 +193,16 @@
       effort="18"
       velocity="0.94" />
     -->
+    <!-- Modified limits for motion opt, but backward from NW's setup
     <limit
       lower="2.46"
       upper="5.26"
+      effort="18"
+      velocity="0.94" />
+    -->
+    <limit
+      lower="-2.1"
+      upper="0.7"
       effort="18"
       velocity="0.94" />
   </joint>
@@ -265,10 +280,17 @@
       effort="18"
       velocity="0.94" />
     -->
-    <!-- This one is essentially an intersection between the above two. -->
+    <!-- This one is essentially an intersection between the above two.
     <limit
       lower="0.65"
       upper="4.01"
+      effort="18"
+      velocity="0.94" />
+    -->
+    <!-- This one is a pi - th transform of the above range to match NW's setup -->
+    <limit
+      lower="-0.86841"
+      upper="2.4916"
       effort="18"
       velocity="0.94" />
   </joint>
